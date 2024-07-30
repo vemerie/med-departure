@@ -12,6 +12,10 @@ const routes: Routes = [
         loadComponent: () =>
           import('./pages/list/list.component').then((m) => m.ListComponent),
       },
+      {
+        path: '**',
+        redirectTo: 'list',
+      },
     ],
   },
 ];
