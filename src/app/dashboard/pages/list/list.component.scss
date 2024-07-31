@@ -17,3 +17,10 @@
   cursor: pointer;
   background-color: white;
 }
+
+.item:first-letter {text-transform:uppercase}
+.item {text-transform:lowercase}
+
+.item-title {width: 20%; font-size: 18px; color: rgb(93, 73, 73); }
+.item-body {width: 50% ; color: rgb(93, 73, 73); }
+

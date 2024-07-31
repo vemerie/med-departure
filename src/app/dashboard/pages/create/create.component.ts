@@ -36,8 +36,8 @@ export class CreateComponent {
 
   public onSubmit(post: FormGroup) {
     const value = post.value;
-    if (this.item.id) {
-      this.updatePost(value);
+    if ( this.item &&  this.item?.id) {
+      this.updatePost(this.item);
     } else {
       this.createPost(value);
     }
@@ -45,7 +45,7 @@ export class CreateComponent {
 
   updatePost(post: Post) {
     this.loading = true;
-    this.dashboardService.createPost(post).subscribe((res) => {
+    this.dashboardService.updatePost(post).subscribe((res) => {
       if (res) {
         this.loading = false;
       }
@@ -54,10 +54,14 @@ export class CreateComponent {
 
   createPost(post: Post) {
     this.loading = true;
-    this.dashboardService.updatePost(post).subscribe((res) => {
-      if (res) {
+    this.dashboardService.createPost(post).subscribe((res) => {
+      console.info(res)
+
+      // if (res) {
+        this.dashboardService.updatePostGlobal(res)
+
         this.loading = false;
-      }
+      // }
     });
   }
 }

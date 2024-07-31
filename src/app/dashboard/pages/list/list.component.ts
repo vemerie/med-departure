@@ -23,12 +23,10 @@ export class ListComponent {
   posts: Post[] = [];
 
   getAllPosts() {
-    this.dashboardService.getAllPost().subscribe({
-      next: (response) => {
-        this.posts = response;
-      },
-      error: (error) => {},
-    });
+    this.dashboardService.getAllPost();
+    this.dashboardService.currentPost.subscribe(res=>{
+      this.posts = res
+    })
   }
 
   edit(id: number) {
