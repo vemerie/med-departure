@@ -2,31 +2,24 @@
 <app-loader class=""></app-loader>
 }
 
-<div class="p-24">
-  <div class="p-12 w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+<div>
+  <div>
     <div class="w-full max-w-lg">
       @if (!item?.id) {
 
-      <h2 class="text-2xl font-semibold pb-16 border-b-[1px] mb-4">Posts</h2>
+      <h2>Posts</h2>
       }
-      <div
-        class="block mx-6 h-[80px] w-[80px] rounded-full bg-gray-200 border-[5px] border-gray-300"
-      ></div>
-      <form
-        class="bg-white rounded px-8 pt-6 pb-8 mb-4"
-        [formGroup]="postForm"
-        (ngSubmit)="onSubmit(postForm)"
-      >
+      <div></div>
+      <form [formGroup]="postForm" (ngSubmit)="onSubmit(postForm)">
         <div class="mb-8">
           <label
-            class="block text-gray-700 text-sm font-normal mb-2"
             for="title"
+            class="block text-gray-700 text-sm font-normal mb-2"
           >
             Title
           </label>
           <input
             formControlName="title"
-            class="shadow appearance-none border rounded-3xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-[45px]"
             id="title"
             type="text"
             placeholder="Enter title"
@@ -34,21 +27,21 @@
         </div>
         <div class="mb-8">
           <label
-            class="block text-gray-700 text-sm font-normal mb-2"
             for="body"
+            class="block text-gray-700 text-sm font-normal mb-2"
           >
             Body
           </label>
           <textarea
             formControlName="body"
-            class="shadow appearance-none border rounded-3xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-[45px]"
             id="body"
             type="text"
             placeholder="Enter body"
+            rows="5"
           ></textarea>
         </div>
 
-        <div class="flex items-center justify-between">
+        <div>
           <button [disabled]="postForm.invalid" type="submit">
             <div class="flex">
               @if (item?.id) {
