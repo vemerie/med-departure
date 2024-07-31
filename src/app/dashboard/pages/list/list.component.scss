@@ -1,0 +1,19 @@
+.item-edit {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: var(--space-2);
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+}
+
+.item-delete {
+  color: var(--error);
+  border: 1px solid var(--error);
+  border-radius: var(--space-2);
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+}

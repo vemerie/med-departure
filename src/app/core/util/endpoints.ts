@@ -1,8 +1,7 @@
-const base_url = '';
+export const base_url = 'https://jsonplaceholder.typicode.com/';
 
-const endpoints = {
-  PRODUCTS: {
-    list: 'products',
-    update: 'updateList',
+export const endpoints = {
+  POSTS: {
+    posts: 'posts',
   },
 };

@@ -1,15 +1,32 @@
-<div class="container">
-  <div class="flex justify-between">
-    <ng-container>
-      <div class="flex gap-1">
-        <div class="">Header</div>
-        <div class="">Description</div>
-        <div>Header</div>
-      </div>
-    </ng-container>
-
+<section>
+  <app-create></app-create>
+  <div class="py-8 border">
     <div>
-      <button class="bg-primary text-white">Create product</button>
+      @for (item of posts; track $index) {
+
+      <div class="m-2">
+        <div class="flex gap-2 justify-between">
+          <div style="width: 10%">{{ item.id }}</div>
+          <div style="width: 20%">{{ item.title }}</div>
+          <div style="width: 50%">{{ item.body }}</div>
+          <div>
+            @if(item.id){
+            <div class="flex gap-2">
+              <button class="item-edit" (click)="edit(item.id)">
+                Edit Post
+              </button>
+              <button class="item-delete" (click)="remove(item.id)">
+                Delete
+              </button>
+            </div>
+            }
+          </div>
+        </div>
+        @if(item.id === itemIdToEdit && openEdit ){
+        <app-create [item]="item"></app-create>
+        }
+      </div>
+      }
     </div>
   </div>
-</div>
+</section>

@@ -96,8 +96,50 @@
   padding: var(--space-3);
 }
 
+.m-1 {
+  margin: var(--space-1);
+}
+
+.m-2 {
+  margin: var(--space-2);
+}
+
+.m-3 {
+  margin: var(--space-3);
+}
+
 button {
   border: none;
   border-radius: 10px;
   padding: var(--space-1);
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+textarea[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 80%;
+  display: block;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 2rem auto;
 }

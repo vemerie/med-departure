@@ -1,1 +1,20 @@
-<router-outlet />
+<div class="container">
+  <div class="flex justify-between">
+    <ng-container>
+      <div class="flex gap-1">
+        <div class="">Header</div>
+        <div class="">Description</div>
+        <div>Header</div>
+      </div>
+    </ng-container>
+
+    <div>
+      <a [routerLink]="['/dashboard/create']">
+        <button class="bg-primary text-white">Add Post</button>
+      </a>
+    </div>
+  </div>
+  <main>
+    <router-outlet />
+  </main>
+</div>
